@@ -1,0 +1,3 @@
+const allowedOrigins = ["https://song-app.onrender.com"];
+
+module.exports = allowedOrigins;
