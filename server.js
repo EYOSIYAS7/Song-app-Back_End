@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const corsOptions = require("./config/corsOptions");
+
 const route = require("./routes/route");
 require("dotenv").config();
 const { response } = require("express");
@@ -15,7 +15,7 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.static("../client/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
